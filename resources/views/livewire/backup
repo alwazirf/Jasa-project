@@ -1,0 +1,96 @@
+        @if($allMembers)
+        <div class="row">
+            <div class="col-lg-6">
+                <a wire:click="downloadPdf" class="btn bg-gradient-primary btn-sm mb-4" type="button">PDF</a>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    @foreach($members as $member)
+                    <div class="col-xl-4 mb-xl-0 mb-4">
+                        <div class="card bg-transparent shadow-xl mb-4">
+                            <div class="overflow-hidden position-relative border-radius-xl"
+                                style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+                                <span class="mask bg-gradient-dark"></span>
+                                <div class="card-body position-relative z-index-1 p-2">
+                                    <div class="text-center">
+                                        <img src="../assets/img/logos/icon.png" alt="" style="height:50px">
+                                        <span class="text-white fs-6">Jaringan Aneuk Syuhada Aceh</span>
+                                        <hr class="bg-light">
+                                    </div>
+                                    <div class="my-3">
+                                        <div class="d-flex mx-4">
+                                            <div class="me-4">
+                                                <p class="text-white text-sm opacity-8 mb-0">No Anggota</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Nama</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Kecamatan</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Jenis Kelamin</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Status</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->member_no }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->name }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->district->city->name }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->gender }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->status }}</p>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
+                                            <img class="w-60 mt-2" src="../assets/img/logos/mastercard.png" alt="logo">
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        @endif
+        @if($allWithCity)
+        <div class="row">
+            <div class="col-lg-6">
+                <a wire:click="downloadPdf" class="btn bg-gradient-primary btn-sm mb-4" type="button">PDF</a>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    @foreach($members as $member)
+                    <div class="col-xl-4 mb-xl-0 mb-4">
+                        <div class="card bg-transparent shadow-xl mb-4">
+                            <div class="overflow-hidden position-relative border-radius-xl"
+                                style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+                                <span class="mask bg-gradient-dark"></span>
+                                <div class="card-body position-relative z-index-1 p-2">
+                                    <div class="text-center">
+                                        <img src="../assets/img/logos/icon.png" alt="" style="height:50px">
+                                        <span class="text-white fs-6">Jaringan Aneuk Syuhada Aceh</span>
+                                        <hr class="bg-light">
+                                    </div>
+                                    <div class="my-3">
+                                        <div class="d-flex mx-4">
+                                            <div class="me-4">
+                                                <p class="text-white text-sm opacity-8 mb-0">Nama</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Kecamatan</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Jenis Kelamin</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">Status</p>
+                                            </div>
+                                            <div>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->name }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->email }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->level->id }}</p>
+                                                <p class="text-white text-sm opacity-8 mb-0">: {{ $member->city->id }}</p>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
+                                            <img class="w-60 mt-2" src="../assets/img/logos/mastercard.png" alt="logo">
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        @endif
