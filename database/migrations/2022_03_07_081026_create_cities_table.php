@@ -17,7 +17,7 @@ class CreateCitiesTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('province_id');
-            $table->string('address')->nullable();
+            // $table->string('address')->nullable();
             $table->timestamps();
         });
     }

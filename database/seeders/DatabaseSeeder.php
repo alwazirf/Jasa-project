@@ -1344,6 +1344,6 @@ class DatabaseSeeder extends Seeder
             'city_id' => 1
         ]);
 
-        Member::factory(20)->create();
+        // Member::factory(20)->create();
     }
 }
