@@ -61,6 +61,7 @@ class UserCreate extends Component
             'email' => $this->email,
             'city_id' => $this->city,
             'level_id' => $this->level_id,
+            'is_admin' => $this->level_id === 1 ? True : False,
             'password' => Hash::make($this->password)
         ]);
         session()->flash('message', 'Data telah tersimpan!');

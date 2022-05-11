@@ -1335,13 +1335,13 @@ class DatabaseSeeder extends Seeder
 
 
 
-
         User::create([
             'name' => 'Admin JASA',
             'email' => 'adminjasa@gmail.com',
             'password' => bcrypt('password'),
             'level_id' => 1,
-            'city_id' => 1
+            'city_id' => 1,
+            'is_admin' => True,
         ]);
 
         // Member::factory(20)->create();
